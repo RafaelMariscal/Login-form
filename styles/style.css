@@ -1,0 +1,221 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+  --stroke: #868686;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: var(--text-base);
+}
+
+body,
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section,
+aside {
+  width: 50vw;
+  height: 100vh;
+  background-color: var(--background);
+}
+
+aside {
+  background-image: url(/images/side-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 40px;
+}
+
+.login-card {
+  padding: 55px 120px;
+  width: 570px;
+  background-color: var(--form-background);
+}
+
+.login-card header,
+.spaced-between,
+label[for='remember'] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+p {
+  margin: 5px 0 25px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input:not(input[type='checkbox']) {
+  width: 100%;
+  height: 44px;
+  text-indent: 35px;
+  color: var(--text-base);
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid var(--stroke);
+  border-radius: 4px;
+}
+
+input:not(input[type='checkbox']):focus {
+  outline: var(--primary-color) solid 1px;
+}
+
+form {
+  position: relative;
+}
+
+i {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 10px;
+}
+
+.login-svg {
+  top: 35px;
+  background-image: url(/images/mail.svg);
+}
+
+.lock-svg,
+.eye-svg {
+  top: 102.5px;
+  background-image: url(/images/lock.svg);
+}
+
+.eye-svg {
+  left: 300px;
+  background-image: url(/images/eye.svg);
+}
+
+/* FALTA COLOCAR OS SVGS DENTRO DO INPUT!!! */
+
+
+
+.spaced-between {
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+#remember {
+  display: none;
+}
+
+#remember+span::before {
+  content: '';
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid var(--stroke);
+  border-radius: 4px;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+#remember:checked+span::before {
+  background-color: var(--primary-color);
+  background-image: url(/images/check.svg);
+  border: 1px solid var(--primary-color);
+}
+
+#button {
+  background-color: var(--primary-color);
+  color: var(--background);
+  text-indent: 0;
+  border: none;
+  cursor: pointer;
+}
+
+#register-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .login-card {
+    position: absolute;
+    left: 10vw;
+  }
+
+  aside {
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    flex-direction: column;
+  }
+
+  section {
+    height: 65vh;
+    width: 100vw;
+    position: relative;
+  }
+
+  aside {
+    height: 35vh;
+    width: 100vw;
+    background-size: cover;
+  }
+
+  .login-card {
+    bottom: -20%;
+    left: 20px
+  }
+}
+
+@media screen and (max-width: 580px) {
+  aside {
+    background-image: none;
+  }
+
+  .login-card {
+    position: relative;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    width: 310px;
+    margin-right: 10px;
+  }
+
+  section {
+    width: 100vw;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  #logo {
+    padding: 40px 0 30px 5px;
+    position: relative;
+    width: 330px;
+  }
+
+  input {
+    max-width: 330px;
+  }
+
+  .eye-svg {
+    left: 280px;
+  }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Login Form</title>
+</head>
+
+<body>
+  <section>
+
+    <header id="logo">
+      <img src="./images/logo.svg" alt="logo.svg">
+    </header>
+
+    <div class="login-card">
+      <header>
+        <img src="./images/log-in.svg" alt="log-in.svg">
+        <h1>Faça seu login</h1>
+      </header>
+      <p>Entre com suas informações de cadastro</p>
+      <form action="#">
+        <label for="email">E-mail</label></br>
+        <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required autocomplete="off"></br>
+        <i class=" login-svg"></i>
+        <label for="password">Senha</label></br>
+        <input type="password" name="password" id="password" placeholder="Digite sua senha" required>
+        <i class=" lock-svg"></i>
+        <i class=" eye-svg"></i>
+
+        <div class="spaced-between">
+          <label for="remember">
+            <input type="checkbox" name="remember" id="remember" required>
+            <span class="checkbox"></span>
+            Lembre-me
+          </label>
+          <a href="#" id="remember-link">Esqueci minha senha</a>
+        </div>
+
+        <input id="button" type="submit" value="Entrar">
+
+        <div id="register-link">
+          <a href="#">Não tem uma conta? <span>Registre-se</span> </a>
+        </div>
+
+      </form>
+    </div>
+
+  </section>
+
+  <aside></aside>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>

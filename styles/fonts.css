@@ -1,0 +1,47 @@
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+  --stroke: #868686;
+}
+
+h1,
+label,
+a,
+#button {
+  font-family: 'Poppins', sans-serif;
+}
+
+p,
+input,
+label[for='remember'] {
+  font-family: 'Roboto', sans-serif;
+}
+
+.spaced-between a,
+#register-link span,
+#button {
+  font-weight: 600;
+}
+
+a {
+  font-size: 14px;
+}
+
+#button {
+  font-size: 18px;
+}
+
+h1 {
+  color: var(--text-title);
+}
+
+a {
+  color: var(--primary-color);
+}
+
+#register-link span {
+  color: var(--primary-color);
+}
